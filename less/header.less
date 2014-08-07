@@ -8,20 +8,32 @@ Version:	2.0
 
 --------------------------------------------------------------------*/
 
+@navHeight: 60px;
+
 header {
-	background: #FFF;
-	height: 50px;
-	line-height: 50px;
+	height: @navHeight;
+	line-height: @navHeight;
 	-webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
 	box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+	background: #001830;
+	width: 100%;
+	z-index: 100;
+	position: fixed;
+	.navbar {
+		height: @navHeight;
+		margin-bottom: 0;
+		.navbar-nav > li > a {
+			line-height: @navHeight;
+			padding: 0 20px;
+		}
+	}
+	.navbar-inverse { //@TODO override
+		border: 0;
+		background: transparent;
+	}
 }
 
-#branding {
-	float: left;
-	display: block;
+.navbar-brand img {
+	height: 30px;
 }
 
-nav {
-	float: right;
-	display: block;
-}

@@ -12,19 +12,31 @@ Version:	2.0
 /* 1. Imports  -----------------------------------------------------*/
 
 //vendor
-@import "vendor/foundation.less";
-
+@import "vendor/reset.less";
+@import "vendor/bootstrap.less";
 
 //global
 @import "header.less";
 
+//specific
+@import "specific/schedule.less";
+
+
 /* 2. Colors  -----------------------------------------------------*/
 
 @darkBlue: #001830;
+
+@brightBlue: #1D92F6;
 
 @grey: #E7EFF7;
 
 /* 3. Body  -----------------------------------------------------*/
 body {
 	background: @grey;
+	font-size: 13px;
+	color: #7F91A2;
+}
+
+main.container {
+	padding-top: @navHeight;
 }
